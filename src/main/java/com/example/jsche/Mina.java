@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.concurrent.TimeUnit;
 //https://blog.rabahi.net/?page_id=1689#Using_JSCH
+//https://www.ibm.com/developerworks/cn/java/j-lo-sshauthentication/index.html
 public class Mina {
     public static void main(String[] args) {
         try(SshClient client = SshClient.setUpDefaultClient()) {
@@ -16,7 +17,7 @@ public class Mina {
                     .verify(7L, TimeUnit.SECONDS)
                     .getSession();
 
-            session.addPasswordIdentity("ss33448877!!");
+            session.addPasswordIdentity("");
             session.auth().verify(5L, TimeUnit.SECONDS);
 
             String response =

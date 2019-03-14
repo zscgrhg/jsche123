@@ -19,7 +19,7 @@ public class Main {
         JSch jsch = new JSch();
         Session session=jsch.getSession("root", "47.88.5.214", 22);
 
-        session.setPassword("ss33448877!!");
+        session.setPassword("");
         session.setConfig(config);
         session.connect();
 
